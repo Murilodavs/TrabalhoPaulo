@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Índice de massa corporal </title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            background-color: #da511c;
+            border-radius: 35px;           
+            color: rgb(255, 246, 246);
+            width: 290px;
+            padding: 15px;
+        }
+
+        hr{
+            width: 310px;
+            border: 2px solid #c06541;
+        }
+
+        form{
+            background-color: #62a516c7 ;
+            border:3px solid #ffee005b;
+            border-radius: 20px;
+            width: 800px;
+        }
+
+        input{
+            width: 300px;
+            border:2px solid #ff0800 ;
+            margin: 7px;
+            padding: 8px;
+            text-align: center;
+            
+
+        }
+
+        input::placeholder{
+            color: #1100ff;
+            font-weight: bold;
+        }
+
+        button{
+            border:3px solid #4c00ff00 ;
+            background-color: #35af64;
+            color: rgb(77, 75, 75);
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 7px;
+            margin-bottom: 28px;
+            width: 158px;
+
+
+        }
+
+        button.btn_cancelar{
+            background-color: #dd940d8f !important;
+            color: #ff0000 !important;
+        }
+
+        button.btn_cancelar:hover{
+            border: 3px solid #1900ff;
+        }
+        button:hover{
+            border:3px solid #1900ff;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+
+        
+       
+    
+    <form action="exercicio.js" method="POST">
+        <h3>IMC</h3>
+        <hr>
+        <br>
+        <input type="text" id="Nome" placeholder="Nome" required>
+        <br>
+        <br>
+        <input type="text" id="Peso" placeholder="Peso (kg)" required>
+        <input type="text" id="Altura" placeholder="Altura (metros)" required>
+        <br>
+        <button type="reset" class="btn_cancelar">Limpar</button>
+        <button type="submit">Calcular</button>
+        <table border="1">
+            <tr>
+                <td>IMC</td>
+                <td>CLASSIFICAÇÃO</td>
+                <td>OBESIDADE</td>
+            </tr>
+            <tr>
+                <td>Menor que 18.5</td>
+                <td>Magreza</td>
+                <td>0</td>
+                
+            </tr>
+            <tr>
+                <td>Entre 18.5 e 24.9</td>
+                <td>Normal</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Entre 25.0 e 29.9</td>
+                <td>Sobrepeso</td>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>Entre 30.0 e 39.9</td>
+                <td>Obesidade</td>
+                <td>II</td>
+            </tr>
+            <tr>
+                <td>Maior que 40.0</td>
+                <td>Obesidade Grave</td>
+                <td>III</td>
+            </tr>
+            
+        </table>
+    </form>
+    </center>
+</body>
+</html>
